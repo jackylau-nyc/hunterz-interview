@@ -11,9 +11,9 @@ This project is a full-stack web application with web crawlers that do 2 things:
 - [Node.js](https://nodejs.org/en/download/)
 
 ### Dependencies
-- [Axios](https://www.npmjs.com/package/axios) : Allows us to make http requests
 - [Puppeteer](https://www.npmjs.com/package/puppeteer) : For scripting our webcrawler
 - [React-Router-Dom](https://www.npmjs.com/package/react-router-dom) : For redirecting between our pages 
+- [QueryString](https://www.npmjs.com/package/querystring_) : Gets query parameters
 
 ### To Start
 
