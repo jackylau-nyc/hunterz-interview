@@ -40,10 +40,9 @@ export function listenForOpening(req, res) {
     ({ stdout, stderr }) => {
       try {
         res.writeHead(200, headers);
-        let output = JSON.stringify({
-          stdout: stdout.replaceAll(new RegExp("[[]\n]"), ""),
-        });
-        res.write(output);
+        let output = stdout.replace("[]\n", "");
+        //console.log(output.stdout.length);
+        res.write(output.length + "");
         res.end();
       } catch (e) {
         res.writeHead(500);

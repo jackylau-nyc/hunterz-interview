@@ -5,7 +5,7 @@ async function startBrowser() {
   let browser;
   try {
     browser = await pkg.launch({
-      headless: false,
+      headless: true,
       args: ["--disable-setuid-sandbox"],
       ignoreHTTPSErrors: true,
     });

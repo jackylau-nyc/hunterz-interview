@@ -18,13 +18,19 @@
 //   }
 // };
 
-export const listenForOpening = async () => {
+export const listenForOpening = async (run, setRun) => {
   try {
-    const res = await fetch(`http://localhost:5000/appcheck`, {
+    await fetch(`http://localhost:5000/appcheck`, {
       method: "GET",
-    });
-    console.log(res);
-    return res.json().stdout;
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (data !== 0) {
+          setRun(false);
+          alert("Appointments are available");
+        }
+      });
+    return run;
   } catch (error) {
     return error.message;
   }
