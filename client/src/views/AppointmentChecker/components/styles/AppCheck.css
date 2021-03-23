@@ -1,0 +1,30 @@
+.app-check {
+  height: 40%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px;
+}
+
+.app-check h1 {
+  font-size: 50px;
+}
+
+.app-check button {
+  cursor: pointer;
+  font-weight: bold;
+  width: 10%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: orangered;
+  border: 1px solid tomato;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.app-check button:hover {
+  color: white;
+}
